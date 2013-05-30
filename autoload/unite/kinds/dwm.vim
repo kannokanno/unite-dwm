@@ -26,8 +26,12 @@ let s:kind.action_table.delete = {
       \ }
 function! s:kind.action_table.delete.func(candidates)
   for candidate in a:candidates
-    call unite#take_action('open', candidate)
-    call DWM_Close()
+    execute candidate.action__window_nr.'wincmd w'
+    close
+    if candidate.action__window_nr == 1
+      " Close master panel.
+      close | wincmd H | call DWM_ResizeMasterPaneWidth()
+    end
   endfor
 endfunction
 
