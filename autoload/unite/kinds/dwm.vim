@@ -26,7 +26,7 @@ let s:kind.action_table.delete = {
       \ }
 function! s:kind.action_table.delete.func(candidates)
   for candidate in a:candidates
-    call unite#take_action('open', a:candidate)
+    call unite#take_action('open', candidate)
     call DWM_Close()
   endfor
 endfunction
