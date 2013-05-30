@@ -3,18 +3,15 @@ unite-dwm
 
 [dwm.vim](https://github.com/spolu/dwm.vim) の Unite sourceです。
 
-必要なもの
-===========
+## 必要なもの
 
 [unite.vim](https://github.com/Shougo/unite.vim)
 
-使い方
-=====
+## 使い方
 
 `:Unite dwm`
 
-アクション
-==========
+## アクション
 
 このsourceはwindow sourceを継承しています。  
 基本的にはwindow sourceと同じアクションが使えますが、以下の点だけ拡張されています。
